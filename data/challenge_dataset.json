@@ -1,0 +1,1241 @@
+[
+  {
+    "case_id": "CHALLENGE-001",
+    "title": "Uplink Buffer Saturated on Mahanadi Hall Switch",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-MHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "High latency + queue drops with zero interface errors proves link congestion",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-MHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 185.0,
+          "jitter_ms": 28.0,
+          "packet_loss_pct": 4.5,
+          "queue_drops": 140,
+          "interface_errors": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-002",
+    "title": "Microburst Video Traffic Overwhelming Brahmaputra Distribution Uplink",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-BHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Transient microburst causing buffer drops",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-BHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 210.0,
+          "jitter_ms": 35.0,
+          "packet_loss_pct": 6.0,
+          "queue_drops": 220,
+          "interface_errors": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-003",
+    "title": "Hostel Subnet Uplink Saturated with Heavy Backup Flow",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Link utilization 94% with queue drops",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 165.0,
+          "packet_loss_pct": 3.8,
+          "queue_drops": 95,
+          "link_utilization_pct": 94.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-004",
+    "title": "Academic Complex Switch Upstream Aggregation Congestion",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SMS"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Throughput degradation accompanied by buffer drops",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SMS",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 178.0,
+          "jitter_ms": 22.0,
+          "packet_loss_pct": 5.2,
+          "queue_drops": 110,
+          "throughput_mbps": 12.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-005",
+    "title": "Research Wing Edge Saturated During Dataset Sync",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SES"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Bulk dataset synchronization saturation",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SES",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 195.0,
+          "packet_loss_pct": 4.1,
+          "queue_drops": 160,
+          "interface_errors": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-006",
+    "title": "Central Library Switch Congested Under Peak Study Hours",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-LBC"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "High library user concurrency saturation",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-LBC",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 160.0,
+          "jitter_ms": 19.0,
+          "packet_loss_pct": 3.5,
+          "queue_drops": 85,
+          "link_utilization_pct": 91.5
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-007",
+    "title": "Admin Building Switch Buffer Overrun",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-ADMIN"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Administrative block switch buffer drops",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-ADMIN",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 172.0,
+          "packet_loss_pct": 4.8,
+          "queue_drops": 130,
+          "interface_errors": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-008",
+    "title": "Core Distribution Link Congestion Spilling to Edge",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "DIST-SW-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Distribution layer link 98% saturated",
+    "telemetry_payload": [
+      {
+        "device_id": "DIST-SW-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 240.0,
+          "jitter_ms": 42.0,
+          "packet_loss_pct": 8.0,
+          "queue_drops": 350,
+          "link_utilization_pct": 98.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-009",
+    "title": "FCS / CRC Frame Corruption on Subarnarekha Hostel Switch",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "High CRC errors and packet loss with normal latency confirms physical layer defect",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 22.0,
+          "packet_loss_pct": 14.0,
+          "interface_errors": 85,
+          "crc_errors": 70,
+          "queue_drops": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-010",
+    "title": "Damaged Fiber Patch Cable on Core Interconnect",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "CORE-SW-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Physical fiber cable degradation causing frame drops",
+    "telemetry_payload": [
+      {
+        "device_id": "CORE-SW-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 18.0,
+          "packet_loss_pct": 18.5,
+          "interface_errors": 140,
+          "crc_errors": 115
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-011",
+    "title": "Transceiver SFP Fault on Rishikulya Switch",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-RHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "SFP optic transceiver emitting corrupted Ethernet frames",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-RHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 25.0,
+          "packet_loss_pct": 12.0,
+          "interface_errors": 95,
+          "crc_errors": 80
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-012",
+    "title": "Bad Switch Port ASIC Port 12 Flapping",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-MHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Internal PHY hardware fault",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-MHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 30.0,
+          "packet_loss_pct": 16.0,
+          "interface_errors": 110,
+          "crc_errors": 90
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-013",
+    "title": "Mechanical Cable Strain on Lecture Hall Complex",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-LHC"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Cable crimp damage causing interface errors",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-LHC",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 20.0,
+          "packet_loss_pct": 15.0,
+          "interface_errors": 75,
+          "crc_errors": 60
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-014",
+    "title": "Electromagnetic Interference (EMI) Inducing Packet Corruptions",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-POWER"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Substation EMI causing CRC check failures",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-POWER",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 28.0,
+          "packet_loss_pct": 22.0,
+          "interface_errors": 160,
+          "crc_errors": 140
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-015",
+    "title": "Water Ingress on Outdoor Fiber Enclosure",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "DIST-SW-OUTDOOR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Fiber splice tray condensation",
+    "telemetry_payload": [
+      {
+        "device_id": "DIST-SW-OUTDOOR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 32.0,
+          "packet_loss_pct": 25.0,
+          "interface_errors": 210,
+          "crc_errors": 180
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-016",
+    "title": "Switch Backplane Bus Degradation",
+    "ground_truth_root_cause": "HARDWARE_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SES"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Backplane fabric error counters rising",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SES",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 24.0,
+          "packet_loss_pct": 13.0,
+          "interface_errors": 88,
+          "crc_errors": 65
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-017",
+    "title": "DNS Primary Daemon Unresponsive (Resolution Timeout)",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DNS-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Zero packet loss + 1250ms DNS resolution isolates application service fault",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DNS-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 15.0,
+          "packet_loss_pct": 0.0,
+          "dns_resolution_ms": 1250.0,
+          "interface_errors": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-018",
+    "title": "DHCP Address Pool Exhaustion on Hostel Scope",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DHCP-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "dhcp_lease_success is False on nominal link",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DHCP-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 14.0,
+          "packet_loss_pct": 0.0,
+          "dhcp_lease_success": false,
+          "dns_resolution_ms": 18.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-019",
+    "title": "DNS SERVFAIL on Campus Authoritative Nameserver",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DNS-02"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "DNS SERVFAIL response causes resolution delay > 500ms",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DNS-02",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 16.0,
+          "packet_loss_pct": 0.0,
+          "dns_resolution_ms": 890.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-020",
+    "title": "DHCP Relay Agent Failure on Distribution Switch",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "DIST-SW-RELAY"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "DHCP relay forward drop prevents student lease acquisition",
+    "telemetry_payload": [
+      {
+        "device_id": "DIST-SW-RELAY",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 18.0,
+          "dhcp_lease_success": false,
+          "packet_loss_pct": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-021",
+    "title": "Recursive DNS Resolver Rate-Limiting Campus Clients",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DNS-RECURSIVE"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Rate-limit backoff pushes DNS latency to near 1 second",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DNS-RECURSIVE",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 15.0,
+          "dns_resolution_ms": 950.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-022",
+    "title": "DHCP NAK Storm From Corrupt Lease Database",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DHCP-02"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Database lock triggers immediate DHCP lease denial",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DHCP-02",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 12.0,
+          "dhcp_lease_success": false
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-023",
+    "title": "DNS Forwarder Blackholing Internal Campus Domains",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DNS-FWD"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Forwarder timeout on intranet lookups",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DNS-FWD",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 14.0,
+          "dns_resolution_ms": 1500.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-024",
+    "title": "Rogue DHCP Server Conflict on Student Dormitory",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-MHR-ACCESS"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Rogue DHCP server blocking legitimate lease confirmations",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-MHR-ACCESS",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 16.0,
+          "dhcp_lease_success": false,
+          "packet_loss_pct": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-025",
+    "title": "Mahanadi Wing A Weak Wi-Fi Signal Coverage Hole",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-MHR-W1"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Signal -82 dBm is below the -75 dBm roaming floor",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-MHR-W1",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -82.0,
+          "packet_loss_pct": 12.0,
+          "latency_ms": 45.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-026",
+    "title": "Auditorium Co-Channel Interference with Severe RF Attenuation",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-AUD-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Extreme path loss through acoustic baffles",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-AUD-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -86.0,
+          "packet_loss_pct": 18.0,
+          "latency_ms": 55.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-027",
+    "title": "Central Canteen Access Point Antenna Misorientation",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-CANTEEN-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Physical antenna polarization mismatch",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-CANTEEN-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -79.0,
+          "packet_loss_pct": 8.5
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-028",
+    "title": "Library Quiet Zone RF Shielding",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-LBC-02"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Metallic architectural mesh attenuating 5GHz signals",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-LBC-02",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -84.0,
+          "packet_loss_pct": 14.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-029",
+    "title": "Guest House Outdoor Terrace Long-Range Link",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-GH-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Free space path loss on terrace clients",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-GH-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -88.0,
+          "packet_loss_pct": 21.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-030",
+    "title": "Subarnarekha Wing B Concrete Pillar Shadowing",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-SHR-W2"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Reinforced concrete obstruction",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-SHR-W2",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -81.0,
+          "packet_loss_pct": 9.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-031",
+    "title": "Sports Complex Gymnasium Multipath Distortion",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-GYM-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Metal girder reflections causing destructive interference",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-GYM-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -83.0,
+          "packet_loss_pct": 11.5
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-032",
+    "title": "Faculty Housing Walkway Boundary Degradation",
+    "ground_truth_root_cause": "WEAK_WIFI",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-FAC-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Peripheral cell edge degradation",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-FAC-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -85.0,
+          "packet_loss_pct": 15.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-033",
+    "title": "BGP Process Loop Saturating Core Switch CPU",
+    "ground_truth_root_cause": "RESOURCE_EXHAUSTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-CORE-SW1"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Control plane 96% CPU spike without interface buffer congestion",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-CORE-SW1",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "cpu_pct": 96.0,
+          "memory_pct": 82.0,
+          "latency_ms": 35.0,
+          "queue_drops": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-034",
+    "title": "Memory Leak on Academic Gateway Switch",
+    "ground_truth_root_cause": "RESOURCE_EXHAUSTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SMS"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Memory exhausted at 95.5% triggers resource exhaustion hypothesis",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SMS",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "cpu_pct": 78.0,
+          "memory_pct": 95.5,
+          "latency_ms": 28.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-035",
+    "title": "SNMP Query Storm Saturating Switch CPU",
+    "ground_truth_root_cause": "RESOURCE_EXHAUSTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-MHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "SNMP agent poll loop hogging CPU cycles",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-MHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "cpu_pct": 98.0,
+          "memory_pct": 88.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-036",
+    "title": "TCAM Overflow on Multicast Distribution Node",
+    "ground_truth_root_cause": "RESOURCE_EXHAUSTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "DIST-SW-TCAM"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Table exhaustion causing software punt",
+    "telemetry_payload": [
+      {
+        "device_id": "DIST-SW-TCAM",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "cpu_pct": 92.0,
+          "memory_pct": 94.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-037",
+    "title": "Syslog Daemon Buffer OOM Condition",
+    "ground_truth_root_cause": "RESOURCE_EXHAUSTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SES"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "System RAM at 97%",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SES",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "cpu_pct": 89.0,
+          "memory_pct": 97.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-038",
+    "title": "Crypto Process Spike During SSH Key Rotation",
+    "ground_truth_root_cause": "RESOURCE_EXHAUSTION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-LBC"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Heavy cryptographic calculations pinning CPU",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-LBC",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "cpu_pct": 95.0,
+          "memory_pct": 75.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-039",
+    "title": "Nominal Baseline Telemetry on Core Switch",
+    "ground_truth_root_cause": "NORMAL_OPERATION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-CORE-SW1"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "All transport, interface, and hardware metrics strictly nominal",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-CORE-SW1",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "HEALTHY",
+        "metrics": {
+          "latency_ms": 12.0,
+          "jitter_ms": 1.2,
+          "packet_loss_pct": 0.0,
+          "queue_drops": 0,
+          "interface_errors": 0,
+          "cpu_pct": 32.0,
+          "memory_pct": 45.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-040",
+    "title": "Quiet Nighttime Operations on Mahanadi Hall Switch",
+    "ground_truth_root_cause": "NORMAL_OPERATION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-MHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Nominal operation verified",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-MHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "HEALTHY",
+        "metrics": {
+          "latency_ms": 15.0,
+          "packet_loss_pct": 0.0,
+          "queue_drops": 0,
+          "interface_errors": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-041",
+    "title": "Healthy High-Speed Link on School of Electrical Sciences",
+    "ground_truth_root_cause": "NORMAL_OPERATION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "IITBBS-SW-SES"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Full throughput with zero drops",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SES",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "HEALTHY",
+        "metrics": {
+          "latency_ms": 9.5,
+          "packet_loss_pct": 0.0,
+          "throughput_mbps": 850.0,
+          "queue_drops": 0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-042",
+    "title": "Nominal DNS Server Operations",
+    "ground_truth_root_cause": "NORMAL_OPERATION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DNS-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Sub-10ms DNS resolution is perfectly healthy",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DNS-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "HEALTHY",
+        "metrics": {
+          "dns_resolution_ms": 8.0,
+          "packet_loss_pct": 0.0,
+          "latency_ms": 4.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-043",
+    "title": "Nominal DHCP Server Lease Issuance",
+    "ground_truth_root_cause": "NORMAL_OPERATION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "SRV-DHCP-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "DHCP operational and responding",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DHCP-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "HEALTHY",
+        "metrics": {
+          "dhcp_lease_success": true,
+          "latency_ms": 5.0,
+          "packet_loss_pct": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-044",
+    "title": "Optimal Wi-Fi Access Point RF Metrics",
+    "ground_truth_root_cause": "NORMAL_OPERATION",
+    "secondary_root_causes": [],
+    "affected_devices": [
+      "AP-MHR-W1"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 1,
+    "notes": "Signal -52 dBm is optimal RF strength",
+    "telemetry_payload": [
+      {
+        "device_id": "AP-MHR-W1",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "HEALTHY",
+        "metrics": {
+          "signal_strength_dbm": -52.0,
+          "packet_loss_pct": 0.0,
+          "latency_ms": 14.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-045",
+    "title": "Severely Stale Telemetry (6 Hours Old) Requiring Abstention",
+    "ground_truth_root_cause": "INSUFFICIENT_EVIDENCE",
+    "secondary_root_causes": [],
+    "affected_devices": [],
+    "expected_abstention": true,
+    "expected_cluster_count": 1,
+    "notes": "Staleness > 7200s with nominal telemetry triggers honest epistemic abstention",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-MHR",
+        "timestamp": "2026-11-01T04:00:00Z",
+        "status": "HEALTHY",
+        "metrics": {
+          "latency_ms": 15.0,
+          "packet_loss_pct": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-046",
+    "title": "Completely Empty Telemetry Payload Requiring Abstention",
+    "ground_truth_root_cause": "INSUFFICIENT_EVIDENCE",
+    "secondary_root_causes": [],
+    "affected_devices": [],
+    "expected_abstention": true,
+    "expected_cluster_count": 1,
+    "notes": "Zero telemetry records must cleanly trigger INSUFFICIENT_EVIDENCE",
+    "telemetry_payload": []
+  },
+  {
+    "case_id": "CHALLENGE-047",
+    "title": "Borderline Telemetry Without Decisive Anomaly Signals",
+    "ground_truth_root_cause": "INSUFFICIENT_EVIDENCE",
+    "secondary_root_causes": [],
+    "affected_devices": [],
+    "expected_abstention": true,
+    "expected_cluster_count": 1,
+    "notes": "Extremely sparse single-metric reading below confidence threshold",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-UNKNOWN",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "UNKNOWN",
+        "metrics": {
+          "latency_ms": 36.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-048",
+    "title": "Concurrent Independent Faults: Mahanadi Congestion + Rishikulya Hardware Failure",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [
+      "HARDWARE_FAILURE"
+    ],
+    "affected_devices": [
+      "IITBBS-SW-MHR",
+      "IITBBS-SW-RHR"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 2,
+    "notes": "Page 5 multi-incident: two independent hostels experiencing distinct fault types simultaneously",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-MHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 190.0,
+          "queue_drops": 140,
+          "packet_loss_pct": 5.0,
+          "interface_errors": 0
+        }
+      },
+      {
+        "device_id": "IITBBS-SW-RHR",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "latency_ms": 22.0,
+          "interface_errors": 90,
+          "crc_errors": 75,
+          "packet_loss_pct": 14.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-049",
+    "title": "Concurrent Independent Faults: Library Wi-Fi RF Hole + Central DNS Service Outage",
+    "ground_truth_root_cause": "DNS_DHCP_FAILURE",
+    "secondary_root_causes": [
+      "WEAK_WIFI"
+    ],
+    "affected_devices": [
+      "SRV-DNS-01",
+      "AP-LBC-01"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 2,
+    "notes": "Concurrent application service failure and wireless RF attenuation in separate facilities",
+    "telemetry_payload": [
+      {
+        "device_id": "SRV-DNS-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "dns_resolution_ms": 1100.0,
+          "packet_loss_pct": 0.0,
+          "latency_ms": 15.0
+        }
+      },
+      {
+        "device_id": "AP-LBC-01",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "signal_strength_dbm": -84.0,
+          "packet_loss_pct": 12.0
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "CHALLENGE-050",
+    "title": "Concurrent Independent Faults: Electrical Sciences Congestion + Admin Switch CPU Saturation",
+    "ground_truth_root_cause": "LINK_CONGESTION",
+    "secondary_root_causes": [
+      "RESOURCE_EXHAUSTION"
+    ],
+    "affected_devices": [
+      "IITBBS-SW-SES",
+      "IITBBS-SW-ADMIN"
+    ],
+    "expected_abstention": false,
+    "expected_cluster_count": 2,
+    "notes": "Simultaneous network buffer saturation and control plane processor exhaustion",
+    "telemetry_payload": [
+      {
+        "device_id": "IITBBS-SW-SES",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "WARNING",
+        "metrics": {
+          "latency_ms": 182.0,
+          "queue_drops": 125,
+          "packet_loss_pct": 4.2,
+          "interface_errors": 0
+        }
+      },
+      {
+        "device_id": "IITBBS-SW-ADMIN",
+        "timestamp": "2026-11-01T10:00:00Z",
+        "status": "CRITICAL",
+        "metrics": {
+          "cpu_pct": 97.0,
+          "memory_pct": 89.0,
+          "latency_ms": 25.0
+        }
+      }
+    ]
+  }
+]

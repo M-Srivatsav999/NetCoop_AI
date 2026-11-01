@@ -1,0 +1,202 @@
+{
+  "timestamp": "2026-11-01 05:25:22 UTC",
+  "total_scenarios_evaluated": 700,
+  "overall_accuracy": 100.0,
+  "macro_f1_score": 1.0,
+  "top_label_brier_score": 0.0054,
+  "multiclass_brier_score": 0.0061,
+  "expected_calibration_error": 0.0283,
+  "abstention_quality": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "expected": 100,
+    "actual": 100
+  },
+  "reliability_diagram": [
+    {
+      "bin": "0.0 - 0.1",
+      "sample_count": 0,
+      "mean_predicted_confidence": 0.0,
+      "empirical_accuracy": 0.0,
+      "calibration_gap": 0.0
+    },
+    {
+      "bin": "0.1 - 0.2",
+      "sample_count": 0,
+      "mean_predicted_confidence": 0.0,
+      "empirical_accuracy": 0.0,
+      "calibration_gap": 0.0
+    },
+    {
+      "bin": "0.2 - 0.3",
+      "sample_count": 0,
+      "mean_predicted_confidence": 0.0,
+      "empirical_accuracy": 0.0,
+      "calibration_gap": 0.0
+    },
+    {
+      "bin": "0.3 - 0.4",
+      "sample_count": 0,
+      "mean_predicted_confidence": 0.0,
+      "empirical_accuracy": 0.0,
+      "calibration_gap": 0.0
+    },
+    {
+      "bin": "0.4 - 0.5",
+      "sample_count": 0,
+      "mean_predicted_confidence": 0.0,
+      "empirical_accuracy": 0.0,
+      "calibration_gap": 0.0
+    },
+    {
+      "bin": "0.5 - 0.6",
+      "sample_count": 0,
+      "mean_predicted_confidence": 0.0,
+      "empirical_accuracy": 0.0,
+      "calibration_gap": 0.0
+    },
+    {
+      "bin": "0.6 - 0.7",
+      "sample_count": 0,
+      "mean_predicted_confidence": 0.0,
+      "empirical_accuracy": 0.0,
+      "calibration_gap": 0.0
+    },
+    {
+      "bin": "0.7 - 0.8",
+      "sample_count": 27,
+      "mean_predicted_confidence": 0.755,
+      "empirical_accuracy": 1.0,
+      "calibration_gap": 0.245
+    },
+    {
+      "bin": "0.8 - 0.9",
+      "sample_count": 68,
+      "mean_predicted_confidence": 0.848,
+      "empirical_accuracy": 1.0,
+      "calibration_gap": 0.152
+    },
+    {
+      "bin": "0.9 - 1.0",
+      "sample_count": 505,
+      "mean_predicted_confidence": 1.0,
+      "empirical_accuracy": 1.0,
+      "calibration_gap": 0.0
+    }
+  ],
+  "latency_metrics_ms": {
+    "mean": 1.53,
+    "p50": 1.35,
+    "p95": 2.0,
+    "total_run_time_sec": 1.07
+  },
+  "per_class_metrics": {
+    "DNS_DHCP_FAILURE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    },
+    "HARDWARE_FAILURE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    },
+    "LINK_CONGESTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    },
+    "NORMAL_OPERATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    },
+    "RESOURCE_EXHAUSTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    },
+    "WEAK_WIFI": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 100
+    }
+  },
+  "confusion_matrix": {
+    "NORMAL_OPERATION": {
+      "NORMAL_OPERATION": 100,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "LINK_CONGESTION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "WEAK_WIFI": 0
+    },
+    "LINK_CONGESTION": {
+      "LINK_CONGESTION": 100,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "WEAK_WIFI": 0
+    },
+    "HARDWARE_FAILURE": {
+      "HARDWARE_FAILURE": 100,
+      "DNS_DHCP_FAILURE": 0,
+      "NORMAL_OPERATION": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "LINK_CONGESTION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "WEAK_WIFI": 0
+    },
+    "WEAK_WIFI": {
+      "WEAK_WIFI": 100,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0
+    },
+    "DNS_DHCP_FAILURE": {
+      "DNS_DHCP_FAILURE": 100,
+      "NORMAL_OPERATION": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "LINK_CONGESTION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "WEAK_WIFI": 0
+    },
+    "RESOURCE_EXHAUSTION": {
+      "RESOURCE_EXHAUSTION": 100,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "WEAK_WIFI": 0
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "INSUFFICIENT_EVIDENCE": 100,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "NORMAL_OPERATION": 0,
+      "LINK_CONGESTION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "WEAK_WIFI": 0
+    }
+  }
+}

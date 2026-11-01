@@ -1,0 +1,383 @@
+{
+  "evaluation_title": "NetCoop AI Blind Challenge Benchmark Evaluation",
+  "timestamp": "2026-11-01T05:25:25.606680+00:00",
+  "total_cases": 32,
+  "accuracy": {
+    "top1_accuracy": 0.9688,
+    "top3_accuracy": 1.0,
+    "correct_top1_count": 31,
+    "correct_top3_count": 32
+  },
+  "calibration": {
+    "binary_brier_score": 0.035,
+    "multiclass_brier_score": 0.0077,
+    "expected_calibration_error_ece": 0.0386,
+    "reliability_bins": [
+      {
+        "bin_index": 0,
+        "range": "[0.0, 0.1)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 1,
+        "range": "[0.1, 0.2)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 2,
+        "range": "[0.2, 0.3)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 3,
+        "range": "[0.3, 0.4)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 4,
+        "range": "[0.4, 0.5)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 5,
+        "range": "[0.5, 0.6)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 6,
+        "range": "[0.6, 0.7)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 7,
+        "range": "[0.7, 0.8)",
+        "sample_count": 0,
+        "average_confidence": 0.0,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0,
+        "bias_direction": "EMPTY"
+      },
+      {
+        "bin_index": 8,
+        "range": "[0.8, 0.9)",
+        "sample_count": 1,
+        "average_confidence": 0.88,
+        "empirical_accuracy": 1.0,
+        "calibration_gap": 0.12,
+        "bias_direction": "UNDERCONFIDENT"
+      },
+      {
+        "bin_index": 9,
+        "range": "[0.9, 1.0)",
+        "sample_count": 28,
+        "average_confidence": 1.0,
+        "empirical_accuracy": 0.9643,
+        "calibration_gap": 0.0357,
+        "bias_direction": "OVERCONFIDENT"
+      }
+    ],
+    "double_calibration_guard_provenance": [
+      {
+        "case_id": "BLIND-001",
+        "ground_truth": "LINK_CONGESTION",
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 1.0,
+        "recalibration_value": 1.0,
+        "is_idempotent_guarded": true,
+        "model_source": "persisted_isotonic_calibrator",
+        "timestamp": null
+      },
+      {
+        "case_id": "BLIND-002",
+        "ground_truth": "LINK_CONGESTION",
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 1.0,
+        "recalibration_value": 1.0,
+        "is_idempotent_guarded": true,
+        "model_source": "persisted_isotonic_calibrator",
+        "timestamp": null
+      },
+      {
+        "case_id": "BLIND-003",
+        "ground_truth": "LINK_CONGESTION",
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 1.0,
+        "recalibration_value": 1.0,
+        "is_idempotent_guarded": true,
+        "model_source": "persisted_isotonic_calibrator",
+        "timestamp": null
+      },
+      {
+        "case_id": "BLIND-004",
+        "ground_truth": "LINK_CONGESTION",
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 1.0,
+        "recalibration_value": 1.0,
+        "is_idempotent_guarded": true,
+        "model_source": "persisted_isotonic_calibrator",
+        "timestamp": null
+      },
+      {
+        "case_id": "BLIND-005",
+        "ground_truth": "LINK_CONGESTION",
+        "raw_confidence": 1.0,
+        "calibrated_confidence": 1.0,
+        "recalibration_value": 1.0,
+        "is_idempotent_guarded": true,
+        "model_source": "persisted_isotonic_calibrator",
+        "timestamp": null
+      }
+    ]
+  },
+  "clustering": {
+    "expected_multi_incidents": 1,
+    "correctly_clustered_incidents": 0,
+    "clustering_precision": 0.0,
+    "clustering_recall": 0.0,
+    "clustering_f1_score": 1.0
+  },
+  "abstention_quality": {
+    "expected_abstentions": 3,
+    "actual_abstentions": 3,
+    "correct_abstentions": 3,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0
+  },
+  "latency_profile_ms": {
+    "mean_ms": 1.27,
+    "median_p50_ms": 1.19,
+    "p95_ms": 1.85,
+    "max_ms": 4.49
+  },
+  "per_class_metrics": {
+    "DNS_DHCP_FAILURE": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 26,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1_score": 1.0,
+      "FPR": 0.0,
+      "FNR": 0.0
+    },
+    "HARDWARE_FAILURE": {
+      "TP": 5,
+      "FP": 1,
+      "FN": 0,
+      "TN": 26,
+      "Precision": 0.8333,
+      "Recall": 1.0,
+      "F1_score": 0.9091,
+      "FPR": 0.037,
+      "FNR": 0.0
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 0,
+      "TN": 29,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1_score": 1.0,
+      "FPR": 0.0,
+      "FNR": 0.0
+    },
+    "INTEROPERABILITY_SCHEMA_DEFECT": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 32,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1_score": 0.0,
+      "FPR": 0.0,
+      "FNR": 0.0
+    },
+    "LINK_CONGESTION": {
+      "TP": 8,
+      "FP": 0,
+      "FN": 0,
+      "TN": 24,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1_score": 1.0,
+      "FPR": 0.0,
+      "FNR": 0.0
+    },
+    "NORMAL_OPERATION": {
+      "TP": 3,
+      "FP": 0,
+      "FN": 0,
+      "TN": 29,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1_score": 1.0,
+      "FPR": 0.0,
+      "FNR": 0.0
+    },
+    "RESOURCE_EXHAUSTION": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 1,
+      "TN": 31,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1_score": 0.0,
+      "FPR": 0.0,
+      "FNR": 1.0
+    },
+    "UPSTREAM_SWITCH_FAILURE": {
+      "TP": 0,
+      "FP": 0,
+      "FN": 0,
+      "TN": 32,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1_score": 0.0,
+      "FPR": 0.0,
+      "FNR": 0.0
+    },
+    "WEAK_WIFI": {
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "TN": 26,
+      "Precision": 1.0,
+      "Recall": 1.0,
+      "F1_score": 1.0,
+      "FPR": 0.0,
+      "FNR": 0.0
+    }
+  },
+  "confusion_matrix": {
+    "LINK_CONGESTION": {
+      "LINK_CONGESTION": 8,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    },
+    "HARDWARE_FAILURE": {
+      "HARDWARE_FAILURE": 5,
+      "DNS_DHCP_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    },
+    "RESOURCE_EXHAUSTION": {
+      "HARDWARE_FAILURE": 1,
+      "DNS_DHCP_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    },
+    "WEAK_WIFI": {
+      "WEAK_WIFI": 6,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0
+    },
+    "DNS_DHCP_FAILURE": {
+      "DNS_DHCP_FAILURE": 6,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "INSUFFICIENT_EVIDENCE": 3,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    },
+    "NORMAL_OPERATION": {
+      "NORMAL_OPERATION": 3,
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    },
+    "INTEROPERABILITY_SCHEMA_DEFECT": {
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    },
+    "UPSTREAM_SWITCH_FAILURE": {
+      "DNS_DHCP_FAILURE": 0,
+      "HARDWARE_FAILURE": 0,
+      "INSUFFICIENT_EVIDENCE": 0,
+      "INTEROPERABILITY_SCHEMA_DEFECT": 0,
+      "LINK_CONGESTION": 0,
+      "NORMAL_OPERATION": 0,
+      "RESOURCE_EXHAUSTION": 0,
+      "UPSTREAM_SWITCH_FAILURE": 0,
+      "WEAK_WIFI": 0
+    }
+  }
+}

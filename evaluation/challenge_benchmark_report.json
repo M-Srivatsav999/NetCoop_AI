@@ -1,0 +1,316 @@
+{
+  "timestamp": "2026-11-01 05:25:24 UTC",
+  "challenge_cases_evaluated": 50,
+  "top1_accuracy_pct": 100.0,
+  "top3_accuracy_pct": 100.0,
+  "macro_f1_score": 1.0,
+  "top_label_brier_score": 0.0018,
+  "multiclass_brier_score": 0.0018,
+  "expected_calibration_error": 0.0104,
+  "abstention_metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "expected": 3,
+    "actual": 3
+  },
+  "multi_incident_clustering": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "expected_multi_incidents": 3,
+    "correctly_partitioned": 3
+  },
+  "per_class_metrics": {
+    "DNS_DHCP_FAILURE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "support": 9
+    },
+    "HARDWARE_FAILURE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "support": 8
+    },
+    "INSUFFICIENT_EVIDENCE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "support": 3
+    },
+    "LINK_CONGESTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "support": 10
+    },
+    "NORMAL_OPERATION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "support": 6
+    },
+    "RESOURCE_EXHAUSTION": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "support": 6
+    },
+    "WEAK_WIFI": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "support": 8
+    }
+  },
+  "reliability_bins": [
+    {
+      "bin_index": 0,
+      "bin_range": "[0.0, 0.1)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 1,
+      "bin_range": "[0.1, 0.2)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 2,
+      "bin_range": "[0.2, 0.3)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 3,
+      "bin_range": "[0.3, 0.4)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 4,
+      "bin_range": "[0.4, 0.5)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 5,
+      "bin_range": "[0.5, 0.6)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 6,
+      "bin_range": "[0.6, 0.7)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 7,
+      "bin_range": "[0.7, 0.8)",
+      "sample_count": 0,
+      "mean_confidence": 0.0,
+      "observed_accuracy": 0.0,
+      "calibration_error": 0.0,
+      "bias_direction": "EMPTY"
+    },
+    {
+      "bin_index": 8,
+      "bin_range": "[0.8, 0.9)",
+      "sample_count": 3,
+      "mean_confidence": 0.8363,
+      "observed_accuracy": 1.0,
+      "calibration_error": 0.1637,
+      "bias_direction": "UNDERCONFIDENT"
+    },
+    {
+      "bin_index": 9,
+      "bin_range": "[0.9, 1.0)",
+      "sample_count": 44,
+      "mean_confidence": 1.0,
+      "observed_accuracy": 1.0,
+      "calibration_error": 0.0,
+      "bias_direction": "PERFECT"
+    }
+  ],
+  "per_class_calibration": {
+    "LINK_CONGESTION": {
+      "sample_count": 10,
+      "class_brier_score": 0.0044,
+      "mean_raw_confidence": 0.9537,
+      "mean_calibrated_confidence": 0.9709,
+      "class_ece": 0.0291
+    },
+    "HARDWARE_FAILURE": {
+      "sample_count": 8,
+      "class_brier_score": 0.0,
+      "mean_raw_confidence": 1.0,
+      "mean_calibrated_confidence": 1.0,
+      "class_ece": 0.0
+    },
+    "DNS_DHCP_FAILURE": {
+      "sample_count": 9,
+      "class_brier_score": 0.0044,
+      "mean_raw_confidence": 0.9778,
+      "mean_calibrated_confidence": 0.9778,
+      "class_ece": 0.0222
+    },
+    "WEAK_WIFI": {
+      "sample_count": 8,
+      "class_brier_score": 0.0,
+      "mean_raw_confidence": 1.0,
+      "mean_calibrated_confidence": 1.0,
+      "class_ece": 0.0
+    },
+    "RESOURCE_EXHAUSTION": {
+      "sample_count": 6,
+      "class_brier_score": 0.0,
+      "mean_raw_confidence": 1.0,
+      "mean_calibrated_confidence": 1.0,
+      "class_ece": 0.0
+    },
+    "NORMAL_OPERATION": {
+      "sample_count": 6,
+      "class_brier_score": 0.0,
+      "mean_raw_confidence": 0.925,
+      "mean_calibrated_confidence": 1.0,
+      "class_ece": 0.0
+    }
+  },
+  "calibration_provenance_samples": [
+    {
+      "case_id": "CHALLENGE-001",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-002",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-003",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-004",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-005",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-006",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-007",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-008",
+      "ground_truth": "LINK_CONGESTION",
+      "predicted": "LINK_CONGESTION",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-009",
+      "ground_truth": "HARDWARE_FAILURE",
+      "predicted": "HARDWARE_FAILURE",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    },
+    {
+      "case_id": "CHALLENGE-010",
+      "ground_truth": "HARDWARE_FAILURE",
+      "predicted": "HARDWARE_FAILURE",
+      "raw_confidence": 1.0,
+      "calibrated_confidence": 1.0,
+      "double_calibration_guarded": true,
+      "delta": 0.0
+    }
+  ],
+  "latency": {
+    "mean_ms": 1.22,
+    "median_ms": 1.1,
+    "p95_ms": 1.61,
+    "max_ms": 4.88
+  }
+}

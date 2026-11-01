@@ -1,0 +1,588 @@
+{
+  "benchmark_title": "NetCoop AI \u2014 Topology Generalization Benchmark",
+  "timestamp": "2026-11-01T05:25:26.347342+00:00",
+  "total_topologies_evaluated": 4,
+  "topology_families": [
+    "Spine-Leaf",
+    "Metro Ring",
+    "Multi-Domain WAN",
+    "Star-Mesh Hybrid"
+  ],
+  "total_scenarios_evaluated": 32,
+  "overall_top1_accuracy": 100.0,
+  "overall_top3_accuracy": 87.5,
+  "root_device_localization_accuracy": 100.0,
+  "macro_f1_score": 0.9738,
+  "multiclass_brier_score": 0.0257,
+  "expected_calibration_error_ece": 0.1748,
+  "duration_seconds": 0.05,
+  "family_breakdown": {
+    "Spine-Leaf": {
+      "total": 8,
+      "top1_accuracy": 100.0,
+      "top3_accuracy": 87.5,
+      "device_accuracy": 100.0,
+      "abstentions_emitted": 1
+    },
+    "Metro Ring": {
+      "total": 8,
+      "top1_accuracy": 100.0,
+      "top3_accuracy": 87.5,
+      "device_accuracy": 100.0,
+      "abstentions_emitted": 1
+    },
+    "Multi-Domain WAN": {
+      "total": 8,
+      "top1_accuracy": 100.0,
+      "top3_accuracy": 87.5,
+      "device_accuracy": 100.0,
+      "abstentions_emitted": 1
+    },
+    "Star-Mesh Hybrid": {
+      "total": 8,
+      "top1_accuracy": 100.0,
+      "top3_accuracy": 87.5,
+      "device_accuracy": 100.0,
+      "abstentions_emitted": 1
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "TOPO-SPINE-01-CONGESTION",
+      "topology_family": "Spine-Leaf",
+      "title": "Spine Switch Egress Buffer Congestion Cascading to Leaves",
+      "expected_root_cause": "LINK_CONGESTION",
+      "predicted_root_cause": "LINK_CONGESTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "SPINE-01",
+      "affected_devices_identified": [
+        "LEAF-01",
+        "LEAF-02",
+        "SPINE-01",
+        "SRV-WEB-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-SPINE-02-HARDWARE",
+      "topology_family": "Spine-Leaf",
+      "title": "Leaf Optical Transceiver Physical Degradation",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "HARDWARE_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "LEAF-03",
+      "affected_devices_identified": [
+        "LEAF-03",
+        "SRV-DB-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-SPINE-03-RESOURCE",
+      "topology_family": "Spine-Leaf",
+      "title": "Database Server Compute Resource Exhaustion",
+      "expected_root_cause": "RESOURCE_EXHAUSTION",
+      "predicted_root_cause": "RESOURCE_EXHAUSTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.84,
+      "expected_faulty_device": "SRV-DB-01",
+      "affected_devices_identified": [
+        "SRV-DB-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-SPINE-04-HEALTHY",
+      "topology_family": "Spine-Leaf",
+      "title": "Spine-Leaf Healthy Operational Baseline",
+      "expected_root_cause": "NORMAL_OPERATION",
+      "predicted_root_cause": "NORMAL_OPERATION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [],
+      "root_device_match": true,
+      "status": "HEALTHY"
+    },
+    {
+      "scenario_id": "TOPO-SPINE-05-INDEPENDENT-FAULTS",
+      "topology_family": "Spine-Leaf",
+      "title": "Dual Independent Faults Across Separated Pods",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "RESOURCE_EXHAUSTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.84,
+      "expected_faulty_device": "LEAF-01",
+      "affected_devices_identified": [
+        "LEAF-01",
+        "SRV-STORAGE-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-SPINE-06-UPSTREAM-FAILURE",
+      "topology_family": "Spine-Leaf",
+      "title": "Complete Spine-02 Upstream Node Outage",
+      "expected_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "predicted_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "SPINE-02",
+      "affected_devices_identified": [
+        "LEAF-03",
+        "LEAF-04",
+        "SPINE-02",
+        "SRV-DB-01",
+        "SRV-STORAGE-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-SPINE-07-SPARSE-ABSTAIN",
+      "topology_family": "Spine-Leaf",
+      "title": "Sparse Ambiguous Metrics Demanding Abstention",
+      "expected_root_cause": "INSUFFICIENT_EVIDENCE",
+      "predicted_root_cause": "INSUFFICIENT_EVIDENCE",
+      "is_top1_correct": true,
+      "is_top3_correct": false,
+      "confidence": 0.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [
+        "LEAF-02"
+      ],
+      "root_device_match": true,
+      "status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "scenario_id": "TOPO-SPINE-08-CASCADING-DELAY",
+      "topology_family": "Spine-Leaf",
+      "title": "Microsecond Order Reversal on Spine Link Buffer Drops",
+      "expected_root_cause": "LINK_CONGESTION",
+      "predicted_root_cause": "LINK_CONGESTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "SPINE-01",
+      "affected_devices_identified": [
+        "LEAF-02",
+        "SPINE-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-RING-01-HUB-CONGESTION",
+      "topology_family": "Metro Ring",
+      "title": "Central Metro Hub Interface Congestion Affecting Ring",
+      "expected_root_cause": "LINK_CONGESTION",
+      "predicted_root_cause": "LINK_CONGESTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "RING-01",
+      "affected_devices_identified": [
+        "EDGE-N1",
+        "RING-01",
+        "RING-02"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-RING-02-FIBER-DEGRADATION",
+      "topology_family": "Metro Ring",
+      "title": "East Metro Ring Optical Span Degradation with CRC Errors",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "HARDWARE_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "RING-03",
+      "affected_devices_identified": [
+        "EDGE-E1",
+        "RING-03"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-RING-03-HEALTHY",
+      "topology_family": "Metro Ring",
+      "title": "Metro Ring Steady-State Normal Operation",
+      "expected_root_cause": "NORMAL_OPERATION",
+      "predicted_root_cause": "NORMAL_OPERATION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [],
+      "root_device_match": true,
+      "status": "HEALTHY"
+    },
+    {
+      "scenario_id": "TOPO-RING-04-NODE-FAIL",
+      "topology_family": "Metro Ring",
+      "title": "Metro Ring Node Total Failure Isolating East Edge",
+      "expected_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "predicted_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "RING-03",
+      "affected_devices_identified": [
+        "EDGE-E1",
+        "EDGE-W1",
+        "RING-03",
+        "RING-04",
+        "RING-05"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-RING-05-WEST-CPU",
+      "topology_family": "Metro Ring",
+      "title": "West Tech Hub Gateway CPU Exhaustion (Control Plane Denial)",
+      "expected_root_cause": "RESOURCE_EXHAUSTION",
+      "predicted_root_cause": "RESOURCE_EXHAUSTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "RING-05",
+      "affected_devices_identified": [
+        "RING-05"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-RING-06-SIMULTANEOUS-RING-ERRORS",
+      "topology_family": "Metro Ring",
+      "title": "Simultaneous Disjoint Ring Anomalies (Preserving Ambiguity)",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "HARDWARE_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "RING-02",
+      "affected_devices_identified": [
+        "RING-02",
+        "RING-05"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-RING-07-CONCURRENT-ISOLATION",
+      "topology_family": "Metro Ring",
+      "title": "Ring Congestion at Hub while Edge Has Physical Drop",
+      "expected_root_cause": "LINK_CONGESTION",
+      "predicted_root_cause": "LINK_CONGESTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "RING-01",
+      "affected_devices_identified": [
+        "EDGE-W1",
+        "RING-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-RING-08-SPARSE-ABSTAIN",
+      "topology_family": "Metro Ring",
+      "title": "Isolated Mild Latency Bump Without Supporting Signals",
+      "expected_root_cause": "INSUFFICIENT_EVIDENCE",
+      "predicted_root_cause": "INSUFFICIENT_EVIDENCE",
+      "is_top1_correct": true,
+      "is_top3_correct": false,
+      "confidence": 0.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [
+        "RING-04"
+      ],
+      "root_device_match": true,
+      "status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "scenario_id": "TOPO-WAN-01-DNS-OUTAGE",
+      "topology_family": "Multi-Domain WAN",
+      "title": "Central Campus DNS Infrastructure Outage Cascading Across Domains",
+      "expected_root_cause": "DNS_DHCP_FAILURE",
+      "predicted_root_cause": "DNS_DHCP_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "SRV-CAMPUS-DNS",
+      "affected_devices_identified": [
+        "BLDG-BIO",
+        "HOSTEL-MAHANADI",
+        "SRV-CAMPUS-DNS"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-WAN-02-HOSTEL-WIFI",
+      "topology_family": "Multi-Domain WAN",
+      "title": "Mahanadi Hostel Access Point Severe RF Signal Degradation",
+      "expected_root_cause": "WEAK_WIFI",
+      "predicted_root_cause": "WEAK_WIFI",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.8,
+      "expected_faulty_device": "AP-MAHANADI-01",
+      "affected_devices_identified": [
+        "AP-MAHANADI-01"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-WAN-03-WAN-CORE-CONGESTION",
+      "topology_family": "Multi-Domain WAN",
+      "title": "North WAN Core Gateway Egress Saturation",
+      "expected_root_cause": "LINK_CONGESTION",
+      "predicted_root_cause": "LINK_CONGESTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "WAN-CORE-NORTH",
+      "affected_devices_identified": [
+        "BLDG-CHEM",
+        "DIST-ACADEMIC",
+        "WAN-CORE-NORTH"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-WAN-04-HPC-FAILURE",
+      "topology_family": "Multi-Domain WAN",
+      "title": "Research HPC Aggregator Switch Hardware Failure",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "HARDWARE_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.8,
+      "expected_faulty_device": "LAB-SUPERCOMP",
+      "affected_devices_identified": [
+        "LAB-SUPERCOMP"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-WAN-05-HEALTHY",
+      "topology_family": "Multi-Domain WAN",
+      "title": "Multi-Domain WAN Healthy Baseline Across All Sectors",
+      "expected_root_cause": "NORMAL_OPERATION",
+      "predicted_root_cause": "NORMAL_OPERATION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [],
+      "root_device_match": true,
+      "status": "HEALTHY"
+    },
+    {
+      "scenario_id": "TOPO-WAN-06-DIST-ACAD-FAILURE",
+      "topology_family": "Multi-Domain WAN",
+      "title": "Academic Distribution Aggregator Total Failure",
+      "expected_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "predicted_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "DIST-ACADEMIC",
+      "affected_devices_identified": [
+        "BLDG-BIO",
+        "BLDG-CHEM",
+        "DIST-ACADEMIC"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-WAN-07-CONCURRENT-ISOLATION",
+      "topology_family": "Multi-Domain WAN",
+      "title": "Concurrent DNS Latency and Disjoint Hostel Wi-Fi Weakness",
+      "expected_root_cause": "DNS_DHCP_FAILURE",
+      "predicted_root_cause": "DNS_DHCP_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.84,
+      "expected_faulty_device": "SRV-CAMPUS-DNS",
+      "affected_devices_identified": [
+        "AP-MAHANADI-01",
+        "SRV-CAMPUS-DNS"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-WAN-08-SPARSE-ABSTAIN",
+      "topology_family": "Multi-Domain WAN",
+      "title": "Sparse Single-Metric Ping Latency Demanding Safe Abstention",
+      "expected_root_cause": "INSUFFICIENT_EVIDENCE",
+      "predicted_root_cause": "INSUFFICIENT_EVIDENCE",
+      "is_top1_correct": true,
+      "is_top3_correct": false,
+      "confidence": 0.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [
+        "DIST-RESIDENTIAL"
+      ],
+      "root_device_match": true,
+      "status": "INSUFFICIENT_EVIDENCE"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-01-HUB-CONGESTION",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Hub Alpha Core Buffer Congestion Impacting Local Spokes",
+      "expected_root_cause": "LINK_CONGESTION",
+      "predicted_root_cause": "LINK_CONGESTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "HUB-ALPHA",
+      "affected_devices_identified": [
+        "HUB-ALPHA",
+        "SPOKE-A1",
+        "SPOKE-A2"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-02-BETA-HARDWARE",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Hub Beta Optical Transceiver Degradation with Frame CRC Errors",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "HARDWARE_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "HUB-BETA",
+      "affected_devices_identified": [
+        "HUB-BETA",
+        "SPOKE-B1"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-03-GAMMA-CPU",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Hub Gamma Routing Engine Exhaustion (High BGP Churn)",
+      "expected_root_cause": "RESOURCE_EXHAUSTION",
+      "predicted_root_cause": "RESOURCE_EXHAUSTION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.771,
+      "expected_faulty_device": "HUB-GAMMA",
+      "affected_devices_identified": [
+        "HUB-GAMMA",
+        "SPOKE-G1"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-04-HEALTHY",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Star-Mesh Full Hybrid Normal Baseline State",
+      "expected_root_cause": "NORMAL_OPERATION",
+      "predicted_root_cause": "NORMAL_OPERATION",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [],
+      "root_device_match": true,
+      "status": "HEALTHY"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-05-UPSTREAM-FAIL",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Hub Beta Power Outage Isolating Spokes B1 and B2",
+      "expected_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "predicted_root_cause": "UPSTREAM_SWITCH_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 1.0,
+      "expected_faulty_device": "HUB-BETA",
+      "affected_devices_identified": [
+        "HUB-BETA",
+        "SPOKE-B1",
+        "SPOKE-B2"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-06-SPOKE-HARDWARE",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Spoke Access Port Defect on Site G2",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "HARDWARE_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.8,
+      "expected_faulty_device": "SPOKE-G2",
+      "affected_devices_identified": [
+        "SPOKE-G2"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-07-DISJOINT-HUBS",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Disjoint Simultaneous Faults on Separated Hub Spokes",
+      "expected_root_cause": "HARDWARE_FAILURE",
+      "predicted_root_cause": "HARDWARE_FAILURE",
+      "is_top1_correct": true,
+      "is_top3_correct": true,
+      "confidence": 0.714,
+      "expected_faulty_device": "SPOKE-A1",
+      "affected_devices_identified": [
+        "SPOKE-A1",
+        "SPOKE-G1"
+      ],
+      "root_device_match": true,
+      "status": "DIAGNOSED"
+    },
+    {
+      "scenario_id": "TOPO-STARMESH-08-SPARSE-ABSTAIN",
+      "topology_family": "Star-Mesh Hybrid",
+      "title": "Incomplete Single Device Telemetry Demanding Abstention",
+      "expected_root_cause": "INSUFFICIENT_EVIDENCE",
+      "predicted_root_cause": "INSUFFICIENT_EVIDENCE",
+      "is_top1_correct": true,
+      "is_top3_correct": false,
+      "confidence": 0.0,
+      "expected_faulty_device": null,
+      "affected_devices_identified": [
+        "SPOKE-B2"
+      ],
+      "root_device_match": true,
+      "status": "INSUFFICIENT_EVIDENCE"
+    }
+  ]
+}
